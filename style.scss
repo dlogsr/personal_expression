@@ -1,0 +1,40 @@
+body{
+	background-color:#000;
+	font-family:'Arial';
+}
+
+.headshot{
+	width: 100%;
+	max-width: 640px;
+	margin: auto;
+	height: 640px;
+	background-image: url('headshot1.jpg');
+	background-size: cover;
+	background-color: #000;
+}
+
+.content{
+	width:100%;
+	max-width:1280px;
+	margin:auto;
+
+	.left-brain{
+		background-color:#400;
+	}
+
+	.right-brain{
+		background-color:#002;
+	}
+	
+	.stream{
+		text-align:center;
+		color: #FFF;
+		float:left;
+		width:50%;
+
+		.stream-photo{
+			width:100%;
+			max-width: 640px;
+		}
+	}
+}
