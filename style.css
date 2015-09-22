@@ -13,9 +13,13 @@ body {
   background-position: center; }
   .headshot .head-div {
     z-index: 9; }
-    .headshot .head-div.head-mid {
-      background: url("headshot1.jpg") no-repeat center;
-      z-index: 99; }
+  .headshot.headshot-mid {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    display: none; }
+    .headshot.headshot-mid.show {
+      display: block; }
   .headshot.headshot-relative {
     position: relative; }
   .headshot.headshot-fixed {
@@ -33,6 +37,7 @@ body {
     background-color: #002; }
   .content .stream {
     text-align: center;
+    background-color: #000;
     color: #FFF;
     float: left;
     padding: 2.5%;

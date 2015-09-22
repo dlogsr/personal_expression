@@ -18,8 +18,19 @@ body{
 		z-index:9;
 
 		&.head-mid{
-			background: url('headshot1.jpg') no-repeat center;
-			z-index:99;
+			// background: url('headshot1.jpg') no-repeat center;
+			// z-index:99;
+		}
+	}
+
+	&.headshot-mid{
+		position:fixed;
+		top:0;
+		z-index:999;
+		display:none;
+
+		&.show{
+			display:block;
 		}
 	}
 
@@ -50,6 +61,7 @@ body{
 
 	.stream{
 		text-align:center;
+		background-color:#000;
 		color: #FFF;
 		float:left;
 		padding:2.5%;
