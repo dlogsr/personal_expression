@@ -6,18 +6,39 @@ body{
 
 .headshot{
 	width: 100%;
-	max-width: 860px;
 	margin: auto;
-	height: 640px;
+	// height: 640px;
 	background-image: url('headshot1.jpg');
-	background-size: cover;
+	background-size: contain;
 	background-color: #000;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	.head-div{
+		z-index:9;
+
+		&.head-mid{
+			background: url('headshot1.jpg') no-repeat center;
+			z-index:99;
+		}
+	}
+
+	&.headshot-relative{
+		position:relative;
+	}
+
+	&.headshot-fixed{
+		position:fixed;
+		// width:100%;
+	}
 }
 
 .content{
 	width:100%;
-	// max-width:1280px;
+	background-color:#000;
+	position:relative;
 	margin:auto;
+	z-index:10;
 
 	.left-brain:hover{
 		background-color:#400;

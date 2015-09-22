@@ -5,16 +5,28 @@ body {
 
 .headshot {
   width: 100%;
-  max-width: 860px;
   margin: auto;
-  height: 640px;
   background-image: url("headshot1.jpg");
-  background-size: cover;
-  background-color: #000; }
+  background-size: contain;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: center; }
+  .headshot .head-div {
+    z-index: 9; }
+    .headshot .head-div.head-mid {
+      background: url("headshot1.jpg") no-repeat center;
+      z-index: 99; }
+  .headshot.headshot-relative {
+    position: relative; }
+  .headshot.headshot-fixed {
+    position: fixed; }
 
 .content {
   width: 100%;
-  margin: auto; }
+  background-color: #000;
+  position: relative;
+  margin: auto;
+  z-index: 10; }
   .content .left-brain:hover {
     background-color: #400; }
   .content .right-brain:hover {
