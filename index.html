@@ -2,49 +2,71 @@
 <html>
 <head>
 <link href="style.css" type="text/css" rel="stylesheet">
+<!-- <link href="css-reset.css" type="text/css" rel="stylesheet"> -->
 </head>
 <body>
+<section class="brain-buttons">
+	<div class="right-button button">(stage) Right</div>
+	<div class="left-button button">(stage) Left</div>
+	<div class="right-arrows button">
+		<div class="right-up scroll-button">^</div>
+		<div class="right-down scroll-button">v</div>
+	</div>
+	<div class="left-arrows button">
+		<div class="left-up scroll-button">^</div>
+		<div class="left-down scroll-button">v</div>
+	</div>
+</section>
 <section class="headshot headshot-main">
 	<div class="head-div head-top"></div>
 	<div class="head-mid head-div"></div>
 	<div class="head-div head-bottom"></div>
 </section>
-<section class="headshot headshot-mid"></section>
+<section class="headshot headshot-mid">
+</section>
 <section class="content">
 	<div class="stream right-brain">
-		(stage) RIGHT
+		<div class="stream-line"></div>
 		<div class="stream-photo-frame frame-right" id="right-ucla-volunteer">
-			<img src="images/right/ucla_volunteer.jpg" class="stream-photo"/>
-			<footer class="stream-caption">
-				<header>
-					Volunteering with UCLA Alumni Association
-				</header>
-				<p>
-					I am pictured here helping to run a UCLA information booth at San Francisco's Pride 2015 Parade, shortly after the Supreme Court legalized same-sex marriage. With a very strong network in the Bay Area, UCLA's Alumni Association provided a community with social and volunteer events that I attended.
-				</p>
-			</footer>
+			<div class="stream-photo-frame-inner">
+				<img src="images/right/ucla_volunteer.jpg" class="stream-photo"/>
+				<footer class="stream-caption">
+					<header>
+						Volunteering with UCLA Alumni Association
+					</header>
+					<p>
+						I am pictured here helping to run a UCLA information booth at San Francisco's Pride 2015 Parade, shortly after the Supreme Court legalized same-sex marriage. With a very strong network in the Bay Area, UCLA's Alumni Association provided a community with social and volunteer events that I attended.
+					</p>
+				</footer>
+			</div>
 		</div>
 		<div class="stream-photo-frame frame-right" id="right-running">
-			<img src="images/right/running.jpg" class="stream-photo"/>
-			<footer class="stream-caption">description</footer>
+			<div class="stream-photo-frame-inner">
+				<img src="images/right/running.jpg" class="stream-photo"/>
+				<footer class="stream-caption">description</footer>
+			</div>
 		</div>
 	</div>
 	<div class="stream left-brain">
-		(stage) LEFT
+		<div class="stream-line"></div>
 		<div class="stream-photo-frame frame-left" id="rtn-group">
-			<img src="images/left/rtn_group1.jpg" class="stream-photo"/>
-			<footer class="stream-caption">
-				<header>
-					Raytheon Engineering Rotation Program, Class of 2013
-				</header>
-				<p>
-					I was part of a group of 10 engineers, selected for versatility, ambition and leadership potential. This group was afforded the opportunity to rotate within Raytheon's various business and technical centers. The program provided a larger foundation for leadership and cultivated a community of peers who supported each other, shared knowledge and continuously learned from each other's experiences and rotations.
-				</p>
-			</footer>
+			<div class="stream-photo-frame-inner">
+				<img src="images/left/rtn_group1.jpg" class="stream-photo"/>
+				<footer class="stream-caption">
+					<header>
+						Raytheon Engineering Rotation Program, Class of 2013
+					</header>
+					<p>
+						I was part of a group of 10 engineers, selected for versatility, ambition and leadership potential. This group was afforded the opportunity to rotate within Raytheon's various business and technical centers. The program provided a larger foundation for leadership and cultivated a community of peers who supported each other, shared knowledge and continuously learned from each other's experiences and rotations.
+					</p>
+				</footer>
+			</div>
 		</div>
 		<div class="stream-photo-frame frame-left" id="ucla-nanolab">
-			<img src="images/left/ucla_nanolab.jpg" class="stream-photo"/>
-			<footer class="stream-caption">description!</footer>
+			<div class="stream-photo-frame-inner">
+				<img src="images/left/ucla_nanolab.jpg" class="stream-photo"/>
+				<footer class="stream-caption">description!</footer>
+			</div>
 		</div>
 	</div>
 </section>

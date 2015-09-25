@@ -2,8 +2,8 @@ var windowHeight;
 
 function scrollAndStop(marker,offset){
 	var scrollOffset;
-	scrollOffset = $(marker).offset().top - offset;
-	$('html,body').stop().animate({scrollTop : scrollOffset},400);
+	scrollOffset = $(marker).parent().next().offset().top - offset;
+	$('html,body').animate({scrollTop : scrollOffset},400);
 }
 
 function getWindowHeight(){
@@ -16,6 +16,7 @@ function adjustContentSpacing(currSection) {
 	//Specific to Headshot div only; dirty code
 	$('.head-div').css({'height':windowHeight/3});
 	$('.headshot-mid').css({'height':windowHeight/3});
+	$('.stream-line').css({'height':windowHeight});
 }
 
 function adjustContentOffset(currSection,num) {
@@ -26,6 +27,9 @@ function adjustContentOffset(currSection,num) {
 $(document).ready(function(){
 	adjustContentSpacing('.headshot');
 	$('.headshot-mid').css({'background-size': windowHeight});
+	$('.right-down').on('touchstart mousedown',function(e){
+		scrollAndStop('.stream-photo-frame',0);
+	});
 });
 
 $('.head-mid').waypoint(function(direction){

@@ -4,6 +4,28 @@ body{
 	overflow-x:hidden;
 }
 
+.brain-buttons{
+	position:fixed;
+	width:100%;
+	height:3em;
+	z-index:999;
+	.button, .scroll-button{
+		position:relative;
+		display:inline-block;
+		width:49%;
+		background-color:#003;
+		color:#fff;
+
+		&.left-button{
+			text-align:right;
+		}
+	}
+
+	.scroll-button{
+		text-align:center;
+	}
+}
+
 .headshot{
 	width: 100%;
 	margin: auto;
@@ -26,7 +48,7 @@ body{
 	&.headshot-mid{
 		position:fixed;
 		top:0;
-		z-index:999;
+		z-index:899;
 		display:none;
 
 		&.show{
@@ -51,13 +73,13 @@ body{
 	margin:auto;
 	z-index:10;
 
-	.left-brain:hover{
-		background-color:#400;
-	}
+	// .left-brain:hover{
+	// 	background-color:#400;
+	// }
 
-	.right-brain:hover{
-		background-color:#002;
-	}
+	// .right-brain:hover{
+	// 	background-color:#002;
+	// }
 
 	.stream{
 		text-align:center;
@@ -66,17 +88,37 @@ body{
 		float:left;
 		padding:2.5%;
 		width:45%;
+
+		.stream-line{
+			position:absolute;
+			width:0px;
+			border:2px dashed white;
+			margin: auto 22%;
+			z-index:1;
+		}
+
 		.stream-photo-frame{
+			position:relative;
 			padding:1em;
+			margin:1em;
+			z-index:2;
 			transition: all 0.15s ease-in;
-			.stream-photo, .stream-caption{
-				width:100%;
-				max-width: 480px;
-				margin: auto;
-				margin-top:1em;
-				text-align:justify;
-				header{
-					text-align:center;
+			.stream-photo-frame-inner{
+				padding:1em;
+				margin:1em;
+				border: 2px dashed white;
+				border-radius: 2em;
+				background-color:#000;
+				.stream-photo, .stream-caption{
+					border-radius:1em;
+					width:100%;
+					max-width: 480px;
+					margin: auto;
+					margin-top:1em;
+					text-align:justify;
+					header{
+						text-align:center;
+					}
 				}
 			}
 
