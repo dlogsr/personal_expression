@@ -64,8 +64,8 @@ body {
 .content-overlay {
   position: fixed;
   width: 100%;
-  z-index: 999;
-  top: calc(33% + 6px); }
+  z-index: 799;
+  top: calc(33% ); }
   .content-overlay .content-overlay-panel {
     transition: all 0.2s ease-in;
     width: 48%;
@@ -78,6 +78,7 @@ body {
   background-color: #000;
   position: relative;
   margin: auto;
+  margin-bottom: 9em;
   z-index: 10; }
   .content .stream {
     text-align: center;
@@ -87,6 +88,13 @@ body {
     padding: 2.5%;
     padding-top: 0;
     width: 45%; }
+    @media only screen and (max-width: 800px) {
+      .content .stream {
+        padding-left: 1%;
+        padding-right: 1%;
+        width: 48%; } }
+    .content .stream.left-brain {
+      margin-top: 16.5%; }
     .content .stream .stream-line {
       position: absolute;
       width: 0px;
@@ -94,8 +102,7 @@ body {
       z-index: 1; }
     .content .stream .stream-photo-frame {
       position: relative;
-      padding: 1em;
-      margin: 1em;
+      padding-top: 1em;
       z-index: 2;
       transition: all 0.15s ease-in; }
       .content .stream .stream-photo-frame .stream-photo-frame-inner {
@@ -106,7 +113,6 @@ body {
         background-color: #000; }
         .content .stream .stream-photo-frame .stream-photo-frame-inner .stream-photo, .content .stream .stream-photo-frame .stream-photo-frame-inner .stream-caption {
           border-radius: 1em;
-          width: 100%;
           max-width: 480px;
           margin: auto;
           margin-top: 1em;
