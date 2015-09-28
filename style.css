@@ -12,7 +12,8 @@ body {
   position: fixed;
   width: 100%;
   overflow: hidden;
-  z-index: 999; }
+  z-index: 999;
+  transition: all .2s ease-in; }
   @media only screen and (min-width: 960px) {
     .brain-buttons .right-arrows {
       right: 2em; }
@@ -30,13 +31,17 @@ body {
       display: none; }
     .brain-buttons .button.right-button, .brain-buttons .button.left-button {
       cursor: pointer; }
+    .brain-buttons .button.right-button:hover {
+      color: #0064ff; }
+    .brain-buttons .button.left-button:hover {
+      color: #ff0064; }
     @media only screen and (max-width: 960px) {
       .brain-buttons .button.right-button {
         text-align: left; }
       .brain-buttons .button.left-button {
         text-align: right; } }
     .brain-buttons .button .brain-arrow-curve {
-      transition: all .2s ease-in;
+      visibility: visible;
       position: absolute;
       border-top: 2px dashed;
       height: 600px;
@@ -112,8 +117,10 @@ body {
         width: 2em; } }
     .brain-buttons .scroll-button.hide {
       display: none; }
-    .brain-buttons .scroll-button:hover {
-      background-color: #646464; }
+  .brain-buttons .right-arrows .scroll-button:hover {
+    background-color: rgba(0, 100, 255, 0.5); }
+  .brain-buttons .left-arrows .scroll-button:hover {
+    background-color: rgba(255, 0, 100, 0.5); }
 
 .headshot {
   width: 100%;
@@ -153,11 +160,13 @@ body {
   width: 45.25%;
   padding-left: 4em;
   margin: auto 24.25%;
-  z-index: 2; }
+  z-index: 2;
+  border-right: 2px dashed white;
+  border-left: 2px dashed white; }
   .cover-stream-line.line-left {
-    border-right: 2px dashed white; }
+    border-right-color: #ff0064 !important; }
   .cover-stream-line.line-right {
-    border-left: 2px dashed white; }
+    border-left-color: #0064ff !important; }
   .cover-stream-line.hide {
     display: none; }
 

@@ -50,6 +50,16 @@ body{
 			cursor:pointer;
 			// margin: 0 1em;
 		}
+
+
+		&.right-button:hover{
+			color:rgba(0,100,255,1);
+		}
+
+		&.left-button:hover{
+			color:rgba(255,0,100,1);
+		}
+
 		@media only screen and (max-width: 960px){
 			&.right-button{
 				text-align:left;
@@ -61,7 +71,7 @@ body{
 		}
 
 		.brain-arrow-curve{
-			transition: all .2s ease-in;
+			visibility: visible;
 			position:absolute;
 			border-top: 2px dashed;
 			height:600px;
@@ -164,11 +174,16 @@ body{
 		&.hide{
 			display:none;
 		}
-
-		&:hover{
-			background-color:rgba(100,100,100,1);
-		}
 	}
+
+	.right-arrows .scroll-button:hover{
+		background-color:rgba(0,100,255,.5);
+	}
+
+	.left-arrows .scroll-button:hover{
+		background-color:rgba(255,0,100,.5);
+	}
+	transition:all .2s ease-in;
 }
 
 .headshot{
@@ -230,13 +245,15 @@ body{
 	padding-left:4em;
 	margin: auto 24.25%;
 	z-index:2;
+	border-right: 2px dashed white;
+	border-left:2px dashed white;
 
 	&.line-left{
-		border-right: 2px dashed white;
+		border-right-color:rgba(255,0,100,1) !important;
 	}
 
 	&.line-right{
-		border-left:2px dashed white;
+		border-left-color:rgba(0,100,255,1) !important;
 	}
 
 	&.hide{
