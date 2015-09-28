@@ -1,20 +1,32 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <link href="style.css" type="text/css" rel="stylesheet">
 <!-- <link href="css-reset.css" type="text/css" rel="stylesheet"> -->
 </head>
 <body>
 <section class="brain-buttons">
-	<div class="right-button button">(stage) Right</div>
-	<div class="left-button button">(stage) Left</div>
+	<div class="right-button button">
+		Right Brain
+		<div class="brain-arrow right-brain-arrow hide">
+			<div class="brain-arrow-box"></div>
+		</div>
+	</div>
+	<div class="left-button button">
+		Left Brain
+		<div class="brain-arrow left-brain-arrow hide">
+			<div class="brain-arrow-box"></div>
+		</div>
+	</div>
 	<div class="right-arrows button">
-		<div class="right-up scroll-button hide">^^^^</div>
-		<div class="right-down scroll-button hide">vvvv</div>
+		<div class="right-up scroll-button hide">▲</div>
+		<div class="right-down scroll-button hide">▼</div>
 	</div>
 	<div class="left-arrows button">
-		<div class="left-up scroll-button hide">^^^^</div>
-		<div class="left-down scroll-button hide">vvvv</div>
+		<div class="left-up scroll-button hide">▲</div>
+		<div class="left-down scroll-button hide">▼</div>
 	</div>
 </section>
 <section class="headshot headshot-main">
@@ -117,7 +129,8 @@
 	</div>
 </section>
 </body>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
 <script type="text/javascript" src="waypoints.min.js"></script>
 <script type="text/javascript" src="script.js"></script>
 </html>

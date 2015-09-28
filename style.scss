@@ -10,6 +10,8 @@ body{
 	background-color:#000;
 	font-family:'Raleway';
 	overflow:hidden;
+	// margin-left:16px;
+	// position:relative;
 }
 
 .brain-buttons{
@@ -17,7 +19,7 @@ body{
 	width:100%;
 	height:3em;
 	z-index:999;
-	.button, .scroll-button{
+	.button{
 		transition: all 0.2s ease-in;
 		position:relative;
 		display:inline-block;
@@ -31,15 +33,104 @@ body{
 		&.hide{
 			display:none;
 		}
+
+		&.right-button, &.left-button{
+			cursor:pointer;
+			// margin: 0 1em;
+		}
+
+		&.right-button{
+			text-align:left;
+		}
+
+		&.left-button{
+			text-align:right;
+		}
+
+		.brain-arrow{
+			// transition: all 0.2s ease-in;
+			position:absolute;
+			border-bottom:3px dashed white;
+			width:40%;
+
+			&.hide{
+				border-bottom: none;
+				visibility:hidden;
+				.brain-arrow-box,div{
+					display:hidden;
+				}
+			}
+
+			&.right-brain-arrow{
+				right:0;
+				border-color:rgba(0,100,255,.75);
+				.brain-arrow-box{
+					right:0;
+					border-top-left-radius: 1em;
+					border-top-right-radius: .5em;
+					background-color:rgba(0,100,255,.5);
+				}
+			}
+
+			&.left-brain-arrow{
+				left:0;
+				border-color:rgba(255,0,100,.75);
+				.brain-arrow-box{
+					left:0;
+					border-top-right-radius: 1em;
+					border-top-left-radius: .5em;
+					background-color:rgba(255,0,100,.5);
+				}
+			}
+
+			.brain-arrow-box{
+				position:absolute;
+				background-color:#fff;
+				height:1em;
+				width:2.5em;
+				bottom:0;
+			}
+		}
+	}
+
+	.right-arrows{
+		text-align:left;
+	}
+
+	.left-arrows{
+		text-align:right;
 	}
 
 	.scroll-button{
+		font-family: 'Arial', 'Georgia', 'Verdana';
+		text-align:center;
+		@media only screen and (max-width: 800px){
+			padding: 0;
+			position:relative;
+			width: 2em;
+		}
+
+		width:auto;
+		display:inline-block;
+		padding:.25em 1em;
+		margin: .25em;
+		border:1px solid #fff;
+		border-radius:100px;
+		cursor:pointer;
+		background:#000;
+		&.hide{
+			display:none;
+		}
+
+		&:hover{
+			background-color:rgba(100,100,100,1);
+		}
 	}
 }
 
 .headshot{
 	width: 100%;
-	margin: auto;
+	margin: auto -8px;
 	// height: 640px;
 	background-image: url('headshot1.jpg');
 	background-size: contain;
@@ -61,7 +152,8 @@ body{
 		top:0;
 		z-index:899;
 		display:none;
-
+		overflow-y:hidden;
+		margin-left:-16px;
 		&.bottom-border{
 			border-bottom: 2px dashed white;
 		}
@@ -77,8 +169,16 @@ body{
 
 	&.headshot-fixed{
 		position:fixed;
+		margin-left:-16px;
 		// width:100%;
 	}
+}
+
+.headshot-mid .mid-stream-line{
+	z-index:999;
+	top:2em;
+	width:30% !important;
+	margin: auto 32% !important
 }
 
 .cover-stream-line, .mid-stream-line{

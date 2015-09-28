@@ -1,6 +1,7 @@
 $frameRight = $('.frame-right');
 $frameLeft = $('.frame-left');
 $headshotMid =  $('.headshot-mid');
+$midStreamLine = $('.mid-stream-line');
 
 var windowHeight;
 var rightFrames = $frameRight.length;
@@ -34,9 +35,10 @@ function scrollAndStop(marker,offset,dir){
 			scrollOffset = 0;
 			frameMarkerRight = 0;
 			frameMarkerLeft = 0;
+			$midStreamLine.addClass('hide');
 			$('.panel-left').removeClass('on');
 			$('.panel-right').removeClass('on');
-			$('.right-arrows .scroll-button').add($('.left-arrows .scroll-button')).addClass('hide');
+			$('.right-arrows .scroll-button').add($('.left-arrows .scroll-button')).add($('.right-brain-arrow')).add($('.left-brain-arrow')).addClass('hide');
 			// (marker == '.frame-right') ? $('.panel-left').addClass('on') : $('.panel-right').addClass('on');
 			//frameMarker++;
 		}
@@ -68,7 +70,7 @@ function adjustContentSpacing(currSection) {
 	pageHeight = getPageHeight();
 	//$(currSection).css({'min-height':windowHeight-70});
 	//Specific to Headshot div only; dirty code
-	$('.head-div').add($headshotMid).add($('.mid-stream-line')).css({'height':windowHeight/3});
+	$('.head-div').add($headshotMid).add($midStreamLine).css({'height':windowHeight/3});
 	$('.cover-stream-line').add($('.stream-line')).add($('.content')).css({'height':pageHeight});
 	$('.content-overlay').add($('.content-overlay-panel')).css({'height':pageHeight});
 	// $('.stream-photo-frame').css({'max-height':windowHeight/3});
@@ -100,11 +102,14 @@ $(document).ready(function(){
 	$('.right-button').on('touchstart mousedown',function(e){
 		frameMarkerRight = 0;
 		scrollAndStop('.frame-right',windowHeight/3,'down');
+		// $midStreamLine.removeClass('line-left');
 		setTimeout(function(){
-			$('.right-arrows .scroll-button').removeClass('hide');
-			$('.left-arrows .scroll-button').addClass('hide');
+			$('.right-arrows .scroll-button').add($('.right-brain-arrow')).removeClass('hide');
+			$('.left-arrows .scroll-button').add($('.left-brain-arrow')).addClass('hide');
+			$midStreamLine.removeClass('hide');
 			$('.panel-left').addClass('on');
 			$('.panel-right').removeClass('on');
+			$midStreamLine.addClass('line-right').removeClass('line-left');
 		},400);
 	});
 
@@ -112,10 +117,12 @@ $(document).ready(function(){
 		frameMarkerLeft = 0;
 		scrollAndStop('.frame-left',windowHeight/3,'down');
 		setTimeout(function(){
-			$('.left-arrows .scroll-button').removeClass('hide');
-			$('.right-arrows .scroll-button').addClass('hide');
+			$('.left-arrows .scroll-button').add($('.left-brain-arrow')).removeClass('hide');
+			$('.right-arrows .scroll-button').add($('.right-brain-arrow')).addClass('hide');
+			$midStreamLine.removeClass('hide');
 			$('.panel-left').removeClass('on');
 			$('.panel-right').addClass('on');
+			$midStreamLine.addClass('line-left').removeClass('line-right');;
 		},400);
 	});
 
