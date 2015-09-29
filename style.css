@@ -215,6 +215,18 @@ body {
       width: 0px;
       margin: auto 22%;
       z-index: 1; }
+    .content .stream .frame-right .stream-photo-frame-inner {
+      border-bottom-left-radius: 0 !important;
+      border-top-right-radius: 8em !important; }
+      @media only screen and (max-width: 960px) {
+        .content .stream .frame-right .stream-photo-frame-inner {
+          border-top-right-radius: 4em !important; } }
+    .content .stream .frame-left .stream-photo-frame-inner {
+      border-bottom-right-radius: 0 !important;
+      border-top-left-radius: 8em !important; }
+      @media only screen and (max-width: 960px) {
+        .content .stream .frame-left .stream-photo-frame-inner {
+          border-top-left-radius: 4em !important; } }
     .content .stream .stream-photo-frame {
       position: relative;
       padding-top: 1em;

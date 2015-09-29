@@ -34,6 +34,13 @@ function scrollToTop(time){
 	$('html,body').animate({scrollTop : 0},time);
 }
 
+function hideTopNav(){
+	$midStreamLine.addClass('hide');
+	$panelLeft.removeClass('on');
+	$panelRight.removeClass('on');
+	$('.right-arrows .scroll-button').add($('.curve-left')).add($('.curve-right')).add($('.left-arrows .scroll-button')).add($('.right-brain-arrow')).add($('.left-brain-arrow')).addClass('hide');
+}
+
 function scrollAndStop(marker,offset,dir){
 	var frameMarker;
 	var $currMarker = $(marker);
@@ -55,10 +62,7 @@ function scrollAndStop(marker,offset,dir){
 			scrollOffset = 0;
 			frameMarkerRight = 0;
 			frameMarkerLeft = 0;
-			$midStreamLine.addClass('hide');
-			$panelLeft.removeClass('on');
-			$panelRight.removeClass('on');
-			$('.right-arrows .scroll-button').add($('.curve-left')).add($('.curve-right')).add($('.left-arrows .scroll-button')).add($('.right-brain-arrow')).add($('.left-brain-arrow')).addClass('hide');
+			hideTopNav();
 		}
 		else{
 			if(frameMarker >= 0) frameMarker -=1;
@@ -72,7 +76,7 @@ function scrollAndStop(marker,offset,dir){
 	}
 	console.log(marker + ' ' + frameMarker + ' to ' + scrollOffset);
 	(marker == '.frame-right') ? frameMarkerRight = frameMarker : frameMarkerLeft = frameMarker;
-	$('html,body').animate({scrollTop : scrollOffset},400);
+	$('html,body').animate({scrollTop : scrollOffset},500);
 }
 
 function getWindowHeight(){
@@ -130,7 +134,7 @@ $(document).ready(function(){
 			$panelRight.removeClass('on');
 			$coverStreamLine.addClass('line-right').removeClass('line-left');
 			$headshotMid.removeClass('border-left-brain').addClass('border-right-brain');
-		},400);
+		},500);
 	});
 
 	$leftButton.on('touchstart mousedown',function(e){
@@ -146,7 +150,7 @@ $(document).ready(function(){
 			$('.frame-right .stream-photo-frame-inner').removeClass('border-right-brain');
 			$coverStreamLine.addClass('line-left').removeClass('line-right');
 			$headshotMid.removeClass('border-right-brain').addClass('border-left-brain');
-		},400);
+		},500);
 	});
 
 });

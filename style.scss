@@ -326,6 +326,24 @@ body{
 			z-index:1;
 		}
 
+		.frame-right .stream-photo-frame-inner{
+			border-bottom-left-radius: 0 !important;
+			border-top-right-radius: 8em !important;
+
+			@media only screen and (max-width: 960px){
+				border-top-right-radius: 4em !important;
+			}
+		}
+
+		.frame-left .stream-photo-frame-inner{
+			border-bottom-right-radius: 0 !important;
+			border-top-left-radius: 8em !important;
+
+			@media only screen and (max-width: 960px){
+				border-top-left-radius: 4em !important;
+			}
+		}
+
 		.stream-photo-frame{
 			// max-height:
 			position:relative;
