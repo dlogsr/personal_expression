@@ -14,6 +14,10 @@ body{
 	// position:relative;
 }
 
+a, a:visited, a:active{
+	color:white;
+}
+
 .brain-buttons{
 	position:fixed;
 	width:100%;
@@ -267,10 +271,19 @@ body{
 	z-index:799;
 	top:calc(33% );
 	.content-overlay-panel{
+		position:absolute;
 		transition: all 0.2s ease-in;
 		width:48%;
 		display:inline-block;
+		visibility:hidden;
+		&.panel-right{
+			left:0;
+		}
+		&.panel-left{
+			right:0;
+		}
 		&.on{
+			visibility:visible;
 			background:rgba(0,0,0,.8);
 		}
 	}
@@ -379,4 +392,8 @@ body{
 			// }
 		}
 	}
+}
+
+#poke-abode img{
+	border: 2px solid white;
 }

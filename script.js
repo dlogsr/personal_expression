@@ -22,6 +22,7 @@ $contentOverlayPanel = $('.content-overlay-panel');
 $content = $('.content');
 $streamLine = $('.stream-line');
 $streamPhoto =$('.stream-photo');
+$snowVid = $('#snow-vid');
 
 var windowHeight;
 var rightFrames = $frameRight.length;
@@ -95,8 +96,10 @@ function adjustContentSpacing(currSection) {
 	$headDiv.add($headshotMid).add($midStreamLine).css({'height':windowHeight/3});
 	$brainButtons.css({'height':windowHeight/3-8});
 	$coverStreamLine.add($streamLine).add($content).css({'height':pageHeight});
-	$contentOverlay.add($contentOverlayPanel).css({'height':pageHeight});
+	$contentOverlayPanel.css({'height':pageHeight});
 	$streamPhoto.css({'max-height':windowHeight/3.2, 'max-width':'100%'});
+	$snowVid.width('75%');
+	$snowVid.height(windowHeight/3.2);
 }
 
 function adjustContentOffset(currSection,num) {
