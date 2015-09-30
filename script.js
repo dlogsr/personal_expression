@@ -182,6 +182,6 @@ $content.waypoint(function(direction){
 	}
 },{offset:'34%'});
 
-$(body).waypoint(function(direction){
+$('body').waypoint(function(direction){
 	$('.headshot').addClass('hide');
 })
