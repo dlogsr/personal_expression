@@ -10,9 +10,12 @@ body{
 	background-color:#000;
 	font-family:'Raleway';
 	overflow:hidden;
-	font-size:.9em;
+	// font-size:.9em;
 	// margin-left:16px;
 	// position:relative;
+	@media only screen and (max-height: 700px), (max-width: 960px){
+		font-size:.9em;
+	}
 }
 
 a, a:visited, a:active{
@@ -85,7 +88,7 @@ a, a:visited, a:active{
 				visibility:hidden;
 			}
 			&.curve-right{
-				@media only screen and (max-width: 960px){
+				@media only screen and (max-width: 1024px){
 					border-top-left-radius: 1em;
 				}
 				border-top-left-radius:2em;
@@ -94,7 +97,7 @@ a, a:visited, a:active{
 				right:0;
 			}
 			&.curve-left{
-				@media only screen and (max-width: 960px){
+				@media only screen and (max-width: 1024px){
 					border-top-right-radius: 1em;
 				}
 				border-top-right-radius:2em;
@@ -162,7 +165,7 @@ a, a:visited, a:active{
 	.scroll-button{
 		font-family: 'Arial', 'Georgia', 'Verdana';
 		text-align:center;
-		@media only screen and (max-width: 800px){
+		@media only screen and (max-width: 1024px){
 			padding: 0;
 			position:relative;
 			width: 2em;
@@ -258,16 +261,17 @@ a, a:visited, a:active{
 			position:absolute;
 			bottom:0;
 			padding: 2em;
+			padding-bottom:0;
 			&.hide{
 				visibility:hidden;
 			}
 			&.right-caption{
 				left:0;
-				padding-right:75%;
+				padding-right:70%;
 			}
 			&.left-caption{
 				right:0;
-				padding-left:75%;
+				padding-left:70%;
 				text-align:right;
 			}
 		}

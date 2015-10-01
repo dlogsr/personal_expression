@@ -6,8 +6,10 @@
 body {
   background-color: #000;
   font-family: 'Raleway';
-  overflow: hidden;
-  font-size: .9em; }
+  overflow: hidden; }
+  @media only screen and (max-height: 700px), (max-width: 960px) {
+    body {
+      font-size: .9em; } }
 
 a, a:visited, a:active {
   color: white; }
@@ -57,7 +59,7 @@ a, a:visited, a:active {
         border-left: 2px dashed;
         border-color: rgba(0, 100, 255, 0.75);
         right: 0; }
-        @media only screen and (max-width: 960px) {
+        @media only screen and (max-width: 1024px) {
           .brain-buttons .button .brain-arrow-curve.curve-right {
             border-top-left-radius: 1em; } }
       .brain-buttons .button .brain-arrow-curve.curve-left {
@@ -65,7 +67,7 @@ a, a:visited, a:active {
         border-right: 2px dashed;
         border-color: rgba(255, 0, 100, 0.75);
         left: 0; }
-        @media only screen and (max-width: 960px) {
+        @media only screen and (max-width: 1024px) {
           .brain-buttons .button .brain-arrow-curve.curve-left {
             border-top-right-radius: 1em; } }
     .brain-buttons .button .brain-arrow {
@@ -114,7 +116,7 @@ a, a:visited, a:active {
     border-radius: 100px;
     cursor: pointer;
     background: #000; }
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 1024px) {
       .brain-buttons .scroll-button {
         padding: 0;
         position: relative;
@@ -170,15 +172,16 @@ a, a:visited, a:active {
       color: white;
       position: absolute;
       bottom: 0;
-      padding: 2em; }
+      padding: 2em;
+      padding-bottom: 0; }
       .headshot.headshot-mid .mid-caption.hide {
         visibility: hidden; }
       .headshot.headshot-mid .mid-caption.right-caption {
         left: 0;
-        padding-right: 75%; }
+        padding-right: 70%; }
       .headshot.headshot-mid .mid-caption.left-caption {
         right: 0;
-        padding-left: 75%;
+        padding-left: 70%;
         text-align: right; }
   .headshot.headshot-relative {
     position: relative; }
