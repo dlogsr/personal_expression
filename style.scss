@@ -16,6 +16,13 @@ body{
 	@media only screen and (max-height: 700px), (max-width: 960px){
 		font-size:.9em;
 	}
+
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 a, a:visited, a:active{
