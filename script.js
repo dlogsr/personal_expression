@@ -23,6 +23,8 @@ $content = $('.content');
 $streamLine = $('.stream-line');
 $streamPhoto =$('.stream-photo');
 $snowVid = $('#snow-vid');
+$rightCaption = $('.right-caption');
+$leftCaption = $('.left-caption');
 
 var windowHeight;
 var rightFrames = $frameRight.length;
@@ -60,6 +62,7 @@ function scrollAndStop(marker,offset,dir){
 	}
 	else if (dir == 'up'){
 		if(frameMarker <= 1){
+			$rightButton.add($leftButton).removeClass('on');
 			scrollOffset = 0;
 			frameMarkerRight = 0;
 			frameMarkerLeft = 0;
@@ -126,6 +129,8 @@ $(document).ready(function(){
 
 	$rightButton.on('touchstart mousedown',function(e){
 		frameMarkerRight = 0;
+		$leftButton.removeClass('on');
+		$rightButton.addClass('on');
 		scrollAndStop('.frame-right',windowHeight/3,'down');
 		setTimeout(function(){
 			$('.right-arrows .scroll-button').add($('.curve-right')).add($('.right-brain-arrow')).removeClass('hide');
@@ -137,11 +142,15 @@ $(document).ready(function(){
 			$panelRight.removeClass('on');
 			$coverStreamLine.addClass('line-right').removeClass('line-left');
 			$headshotMid.removeClass('border-left-brain').addClass('border-right-brain');
+			$leftCaption.addClass('hide');
+			$rightCaption.removeClass('hide');
 		},500);
 	});
 
 	$leftButton.on('touchstart mousedown',function(e){
 		frameMarkerLeft = 0;
+		$rightButton.removeClass('on');
+		$leftButton.addClass('on');
 		scrollAndStop('.frame-left',windowHeight/3,'down');
 		setTimeout(function(){
 			$('.left-arrows .scroll-button').add($('.curve-left')).add($('.left-brain-arrow')).removeClass('hide');
@@ -153,6 +162,8 @@ $(document).ready(function(){
 			$('.frame-right .stream-photo-frame-inner').removeClass('border-right-brain');
 			$coverStreamLine.addClass('line-left').removeClass('line-right');
 			$headshotMid.removeClass('border-right-brain').addClass('border-left-brain');
+			$rightCaption.addClass('hide');
+			$leftCaption.removeClass('hide');
 		},500);
 	});
 

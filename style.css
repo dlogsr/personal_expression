@@ -6,7 +6,8 @@
 body {
   background-color: #000;
   font-family: 'Raleway';
-  overflow: hidden; }
+  overflow: hidden;
+  font-size: .9em; }
 
 a, a:visited, a:active {
   color: white; }
@@ -29,14 +30,14 @@ a, a:visited, a:active {
     width: 49%;
     color: #fff;
     text-align: center;
-    font-size: 2em; }
+    font-size: 3em; }
     .brain-buttons .button.hide {
       display: none; }
     .brain-buttons .button.right-button, .brain-buttons .button.left-button {
       cursor: pointer; }
-    .brain-buttons .button.right-button:hover {
+    .brain-buttons .button.right-button:hover, .brain-buttons .button.right-button.on {
       color: #0064ff; }
-    .brain-buttons .button.left-button:hover {
+    .brain-buttons .button.left-button:hover, .brain-buttons .button.left-button.on {
       color: #ff0064; }
     @media only screen and (max-width: 960px) {
       .brain-buttons .button.right-button {
@@ -135,6 +136,25 @@ a, a:visited, a:active {
   background-position: center; }
   .headshot .head-div {
     z-index: 9; }
+    .headshot .head-div.head-bottom .name-title {
+      text-align: center;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      font-size: 4em;
+      text-shadow: 2px 2px 2px black;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.5); }
+      .headshot .head-div.head-bottom .name-title .name-title-blue {
+        color: #0064ff; }
+      .headshot .head-div.head-bottom .name-title .name-title-red {
+        color: #ff0064; }
+      .headshot .head-div.head-bottom .name-title .name-title-green {
+        color: #00ff64; }
+      .headshot .head-div.head-bottom .name-title .name-title-caption {
+        display: block;
+        position: relative;
+        font-size: .35em; }
   .headshot.headshot-mid {
     position: fixed;
     top: 0;
@@ -146,6 +166,20 @@ a, a:visited, a:active {
       border-bottom: 2px dashed white; }
     .headshot.headshot-mid.show {
       display: block; }
+    .headshot.headshot-mid .mid-caption {
+      color: white;
+      position: absolute;
+      bottom: 0;
+      padding: 2em; }
+      .headshot.headshot-mid .mid-caption.hide {
+        visibility: hidden; }
+      .headshot.headshot-mid .mid-caption.right-caption {
+        left: 0;
+        padding-right: 75%; }
+      .headshot.headshot-mid .mid-caption.left-caption {
+        right: 0;
+        padding-left: 75%;
+        text-align: right; }
   .headshot.headshot-relative {
     position: relative; }
   .headshot.headshot-fixed {
