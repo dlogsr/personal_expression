@@ -14,7 +14,7 @@ body{
 	overflow:hidden;
 	// font-size:.9em;
 	// margin-left:16px;
-	margin-left:0;
+	// margin-left:0;
 	// position:relative;
 	@media only screen and (max-height: 700px), (max-width: 960px){
 		font-size:.9em;
@@ -30,6 +30,11 @@ body{
 
 a, a:visited, a:active{
 	color:white;
+	text-decoration:none;
+}
+
+a:hover{
+	text-decoration:underline;
 }
 
 .brain-buttons{
@@ -245,7 +250,9 @@ a, a:visited, a:active{
 					display:block;
 					position:relative;
 					font-size:.35em;
-
+					.headshot-caption{
+						font-size:.75em;
+					}
 				}
 			}
 		}
@@ -372,9 +379,10 @@ a, a:visited, a:active{
 		position:fixed;
 		width:100%;
 		img{
-			width:100%;
+			width:105%;
 			transition: all 0.2s ease-in;
 			opacity:0;
+			margin-left:-1em;
 		}
 		&.on{
 			img{
