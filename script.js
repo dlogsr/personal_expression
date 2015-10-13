@@ -62,7 +62,7 @@ function scrollAndStop(marker,offset,dir){
 	}
 	else if (dir == 'up'){
 		if(frameMarker <= 1){
-			$rightButton.add($leftButton).removeClass('on');
+			$rightButton.add($leftButton).add($('.content-bg')).removeClass('on');
 			scrollOffset = 0;
 			frameMarkerRight = 0;
 			frameMarkerLeft = 0;
@@ -103,6 +103,7 @@ function adjustContentSpacing(currSection) {
 	$streamPhoto.css({'max-height':windowHeight/3.2, 'max-width':'100%'});
 	$snowVid.width('75%');
 	$snowVid.height(windowHeight/3.2);
+	$('.content-bg').height(windowHeight);
 }
 
 function adjustContentOffset(currSection,num) {
@@ -144,6 +145,9 @@ $(document).ready(function(){
 			$headshotMid.removeClass('border-left-brain').addClass('border-right-brain');
 			$leftCaption.addClass('hide');
 			$rightCaption.removeClass('hide');
+			setTimeout(function(){
+				$('.content-bg').addClass('on');
+			},250);
 		},500);
 	});
 
@@ -164,6 +168,9 @@ $(document).ready(function(){
 			$headshotMid.removeClass('border-right-brain').addClass('border-left-brain');
 			$rightCaption.addClass('hide');
 			$leftCaption.removeClass('hide');
+			setTimeout(function(){
+				$('.content-bg').addClass('on');
+			},250);
 		},500);
 	});
 

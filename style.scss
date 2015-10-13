@@ -8,6 +8,8 @@
 
 body{
 	background-color:#000;
+	// background-image:url('nyc_bg.jpg');
+	// background-size:contain;
 	font-family:'Raleway';
 	overflow:hidden;
 	// font-size:.9em;
@@ -335,6 +337,7 @@ a, a:visited, a:active{
 		width:48%;
 		display:inline-block;
 		visibility:hidden;
+		box-shadow: 0px 0px 80px 30px black;
 		&.panel-right{
 			left:0;
 		}
@@ -363,6 +366,20 @@ a, a:visited, a:active{
 	margin-bottom:9em;
 	z-index:10;
 
+	.content-bg{
+		position:fixed;
+		width:100%;
+		img{
+			width:100%;
+			transition: all 0.2s ease-in;
+			opacity:0;
+		}
+		&.on{
+			img{
+				opacity:1;
+			}
+		}
+	}
 	// .left-brain:hover{
 	// 	background-color:#400;
 	// }
@@ -373,7 +390,7 @@ a, a:visited, a:active{
 
 	.stream{
 		text-align:center;
-		background-color:#000;
+		// background-color:#000;
 		color: #FFF;
 		float:left;
 		padding:2.5%;
@@ -428,7 +445,7 @@ a, a:visited, a:active{
 				margin:1em;
 				border: 2px dashed white;
 				border-radius: 2em;
-				background-color:#000;
+				background-color:rgba(0,0,0,.75);
 				.stream-photo, .stream-caption{
 					border-radius:1em;
 					// width:100%;
